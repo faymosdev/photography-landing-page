@@ -1,0 +1,1 @@
+This is a simple and elegant landing page. The page faetures a visually appealing design with a light, warm color palette, and it includes Theme Toggle Button to switch between light and dark modes for an enhanced user experience.
