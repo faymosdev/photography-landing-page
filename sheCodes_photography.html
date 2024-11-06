@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(255, 200, 124) 0%,
+          rgb(252, 251, 121) 90%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      .container {
+        background: white;
+        border-radius: 10px;
+        max-width: 600px;
+        padding: 20px;
+        margin: 20px auto;
+      }
+      button {
+        background-color: plum;
+        border: 2px solid navy;
+        color: white;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: navy;
+        border: 2px solid plum;
+        color: plum;
+      }
+      footer {
+        color: navy;
+        font-weight: bold;
+        margin: 10px;
+        font-size: 15px;
+        text-align: center;
+      }
+      footer a {
+        color: navy;
+      }
+      .dark-theme {
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 10px;
+        border-radius: 8px;
+      }
+      .dark-theme:hover {
+        background-color: white;
+        color: black;
+      }
+      .yellow-shirt {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      .yellow-shirt:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+      .grid-photo {
+        display: grid;
+        margin: 15px 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+      }
+      .grid-photo img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        aspect-ratio: 1;
+        transition: all 150ms ease-in-out;
+      }
+      .grid-photo img:hover {
+        transform: scale(1.6);
+      }
+      .dark-color {
+        background: linear-gradient(
+          179.4deg,
+          rgb(12, 20, 69) -16.9%,
+          rgb(71, 30, 84) 119.9%
+        );
+        color: plum;
+      }
+      .dark-color .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark-color a {
+        color: white;
+      }
+      .dark-color footer {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-theme">Change Theme!</button>
+    <div class="container">
+      <h1>The Art Of Photography!📸</h1>
+      <h2>My Favourite Hobby.</h2>
+
+      <img
+        src="https://i.insider.com/625825fc8b169c0018f3682c?width=1136&format=jpeg"
+        alt=""
+        class="yellow-shirt"
+      />
+      <div class="grid-photo">
+        <img
+          src="https://web-images5.pixpa.com/xCpAipCkpmtuA2hJX7FBAAEDfsfqcHwxhJZ6znRKLvQ/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTE1MTM1NjcyLXNodXR0ZXJzdG9ja18yODQ1ODE2NDkuanBn"
+          alt=""
+        />
+        <img
+          src="https://stability-images-upload.s3.amazonaws.com/v1_txt2img_20151dfe-da47-4d5f-8423-00bc6a75a308.png"
+          alt=""
+        />
+        <img
+          src="https://photomiau.wordpress.com/wp-content/uploads/2021/07/photomi-portrait-photographers-of-portrait-photography-studio-melbourne.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/originals/57/33/40/573340a82747326c50dd2b21abc6959a.jpg"
+          alt=""
+        />
+      </div>
+      <p>
+        Photography is the art, application, and practice of creating images by
+        recording light, either electronically by means of an image sensor, or
+        chemically by means of a light-sensitive material such as photographic
+        film. The word "photography" was created from the Greek roots φωτός
+        (phōtós), genitive of φῶς (phōs), "light" and γραφή (graphé)
+        "representation by means of lines" or "drawing",together meaning
+        "drawing with light."
+        <br /><br />
+        <a href="https://en.wikipedia.org/wiki/Photography" target="_blank"
+          >Read on Wikipedia</a
+        >
+      </p>
+      <button>Learn More</button>
+    </div>
+    <footer>
+      Coded with💛 by
+      <a href="https://www.instagram.com/_kingfayfay/" target="_blank"
+        >Favour Omorotionmwan</a
+      >
+    </footer>
+    <script>
+      function turnDarkTheme() {
+        let body = document.querySelector("body");
+        // body.classList.toggle("dark-color");
+        if (body.classList.contains("dark-color")) {
+          body.classList.remove("dark-color");
+        } else {
+          body.classList.add("dark-color");
+        }
+      }
+      let darkTheme = document.querySelector(".dark-theme");
+      darkTheme.addEventListener("click", turnDarkTheme);
+    </script>
+  </body>
+</html>
